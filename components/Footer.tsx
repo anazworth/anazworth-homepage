@@ -1,8 +1,11 @@
 import { FolderIcon, ChevronRightIcon  } from '@heroicons/react/outline'
+import Link from 'next/link'
 
 function Footer() {
     return (
-    <div className="sticky bottom-2 flex flex-row flex-nowrap 
+    <>
+    <div className="flex flex-col sticky bottom-2">
+    <div className="flex flex-row flex-nowrap 
                     whitespace-nowrap mb-4 mx-4 justify-between items-center
                     bg-nord2">
 
@@ -12,7 +15,9 @@ function Footer() {
             <FolderIcon className="h-6 w-4 ml-2 overflow-hidden"/>
             <h1 className="ml-2 overflow-hidden">anazworth</h1>
             <ChevronRightIcon className="h-6 w-4"/>
-            <h1 className="">Austin.md</h1>
+            <Link href="https://www.github.com/anazworth">
+                <a className="hover:text-nord12 hover:animate-bounce">Austin.git</a>
+            </Link>
         </div>
 
     {/* Vim Status Bar Right-Side*/}
@@ -22,6 +27,12 @@ function Footer() {
         </div>
 
     </div>
+    </div>
+
+    <div className="flex flex-row justify-center">
+        <h1 className="text-xs text-nord8">© 2022 Austin Nazworth. All Rights Reserved.</h1>
+    </div>
+    </>
            );
 }
 

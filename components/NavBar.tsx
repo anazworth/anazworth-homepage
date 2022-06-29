@@ -8,7 +8,9 @@ const NavBar = () => {
                         flex opacity-80 hover:opacity-100
                         bg-nord0 shadow-2xl hover:shadow-none">
             <div className="flex-1 flex items-center justify-left m-2
-                            text-nord4 whitepace-nowrap text-2xl sm:text-3xl font-mono drop-shadow-2xl subpixel-antialiased">
+                            text-nord4 whitepace-nowrap text-2xl sm:text-3xl
+                            hover:animate-pulse hover:text-nord13
+                            font-mono drop-shadow-2xl subpixel-antialiased">
                 <Link href="/">
                    <a>Austin Nazworth</a>
                 </Link>
@@ -16,17 +18,17 @@ const NavBar = () => {
             {/* FIXME */}
             <div className="text-nord4 text-sm sm:text-2xl font-mono subpixel-antialiased">
                <ul className="flex flex-row whitespace-nowrap gap-x-2 mr-4 sm:gap-x-5 sm:mx-10 my-4 list-none">
-                     <li className="nav-item hover:animate-bounce">
+                     <li className="nav-item hover:animate-bounce hover:text-nord14">
                         <Link href="/about">
                             <a>About me</a>
                         </Link>
                      </li>
-                     <li className="nav-item hover:animate-bounce">
+                     <li className="nav-item hover:animate-bounce hover:text-nord14">
                         <Link href="/projects">
                             <a>Projects</a>
                         </Link>
                      </li>
-                     <li className="nav-item hover:animate-bounce">
+                     <li className="nav-item hover:animate-bounce hover:text-nord14">
                         <Link href="/contact">
                             <a>Contact Me</a>
                         </Link>

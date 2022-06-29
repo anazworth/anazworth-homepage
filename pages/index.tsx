@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <h2 className="text-2xl font-bold underline underline-offset-8">Timeline</h2>
         <ul>
             <li className="text-sm"><strong className="text-nord8">1996</strong> - Born in Starke, FL</li>
-            <li className="text-sm"><strong className="text-nord8">2014</strong> - Graduated from BradFord High School</li>
+            <li className="text-sm"><strong className="text-nord8">2014</strong> - Graduated from Bradford High School</li>
             <li className="text-sm"><strong className="text-nord8">2014 -&gt; 2019</strong> - United States Marine Corps</li>
             <li className="text-sm"><strong className="text-nord8">2020</strong> - First year at Valencia College</li>
             <li className="text-sm"><strong className="text-nord8">2022</strong> - Received A.S. in Information Technology from Valencia</li>
