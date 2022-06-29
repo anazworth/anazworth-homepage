@@ -1,10 +1,14 @@
 import Layout from '../components/layout'
+import styles from '../styles/Home.module.css'
+
 
 function contact() {
     return (
         <Layout>
-        <div>
-        <h1>Work in Progress!</h1>
+        <div className={styles.container}>
+        <main className={styles.main}>
+            <h1>Work in Progress!</h1>
+        </main>
         </div>
         </Layout>
    )

@@ -15,7 +15,7 @@ const NavBar = () => {
             </div>
             {/* FIXME */}
             <div className="text-nord4 text-sm sm:text-2xl font-mono subpixel-antialiased">
-               <ul className="flex flex-row whitespace-nowrap gap-x-5 mx-10 my-4 list-none">
+               <ul className="flex flex-row whitespace-nowrap gap-x-2 mr-4 sm:gap-x-5 sm:mx-10 my-4 list-none">
                      <li className="nav-item hover:animate-bounce">
                         <Link href="/about">
                             <a>About me</a>
