@@ -6,6 +6,11 @@ import  NavBar  from '../components/NavBar'
 import Layout from '../components/layout'
 import Footer from '../components/Footer'
 import austin from '../images/austin.jpg'
+import { TerminalIcon, 
+         DesktopComputerIcon,
+         CodeIcon,
+         VideoCameraIcon,
+         BookOpenIcon } from '@heroicons/react/solid'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +23,9 @@ const Home: NextPage = () => {
       </Head>
       <main className={styles.main}>
       <div className="flex flex-col space-y-8">
+
+            {/*@Bio*/}
+
       <div className="flex flex-col sm:flex-row space-x-4 space-y-4 sm: space-y-2 justify-center">
         <Image className="basis-1/3 sm:basis-1/2 drop-shadow-2xl py-4"
             src="/austin.jpeg"
@@ -53,6 +61,79 @@ const Home: NextPage = () => {
         </ul>
         </div>
       </div>
+
+        <div className="flex flex-col sm:flex-row align-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+        {/*@Tools*/}
+        <div className="flex flex-col space-y-4">
+            <h2 className="text-2xl font-bold underline underline-offset-8">My Favorite Tools</h2>
+            <ul>
+                <li className="flex flex-row space-x-2">
+                    <TerminalIcon className="w-5 h-5 text-nord15"/>
+                    <a href="https://www.neovim.io">Neovim</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <TerminalIcon className="w-5 h-5 text-nord15"/>
+                    <a href="https://iterm2.com">iTerm2</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <TerminalIcon className="w-5 h-5 text-nord15"/>
+                    <a href="https://github.com/tmux/tmux">tmux</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <TerminalIcon className="w-5 h-5 text-nord15"/>
+                    <a href="https://github.com/tldr-pages/tldr</div></div>">tldr</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <DesktopComputerIcon className="w-5 h-5 text-nord13"/>
+                    <a href="https://www.debian.org">Debian</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <CodeIcon className="w-5 h-5 text-nord12"/>
+                    <a href="https://github.com/features/copilot">GitHub Copilot</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        {/*@Resources*/}
+        <div className="flex flex-col space-y-4">
+            <h2 className="text-2xl font-bold underline underline-offset-8">Recommended Resources</h2>
+            <ul>
+                <li className="flex flex-row space-x-2">
+                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                    <a href="https://cs50.harvard.edu/x/2022">CS50x</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                    <a href="https://cs50.harvard.edu/p/2022">CS50p</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                    <a href="https://www.youtube.com/watch?v=8DvywoWv6fI">Python for Everybody</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                    <a href="https://alek772.github.io/Books/Practical%20Git%20Confident%20Git%20Through%20Practice.pdf">Practical Git</a>
+                </li>
+
+                <li className="flex flex-row space-x-2">
+                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                    <a href="https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/">Data Structures and Algorithms</a>
+                </li>
+
+            </ul>
+
+        </div>
+        </div>
 
       </div>
       </main>
