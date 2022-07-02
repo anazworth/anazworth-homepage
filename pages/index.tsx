@@ -119,6 +119,11 @@ const Home: NextPage = () => {
                     <VideoCameraIcon className="w-5 h-5 text-nord9"/>
                     <a href="https://www.youtube.com/watch?v=8DvywoWv6fI">Python for Everybody</a>
                 </li>
+                
+                <li className="flex flex-row space-x-2">
+                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                    <a href="https://missing.csail.mit.edu">MIT Missing Semester</a>
+                </li>
 
                 <li className="flex flex-row space-x-2">
                     <BookOpenIcon className="w-5 h-5 text-nord6"/>
