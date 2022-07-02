@@ -3,7 +3,7 @@
 ## Introduction
 
 This is my personal homepage. You can learn about me and see what I've been working on.
-I used [Vim](https://www.vim.org) as my inspiration
+I used [Vim](https://www.vim.org) as my inspiration. I hope you enjoy it!
 
 [anazworth.com](https://www.anazworth.com)
 
