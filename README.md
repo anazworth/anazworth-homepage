@@ -15,6 +15,7 @@ I used [Vim](https://www.vim.org) as my inspiration. I hope you enjoy it!
 ## Additional Resources
 - [Overpass Mono](https://overpassfont.org)
 - [heroicons](https://heroicons.com)
+- [Nord Theme](https://nordtheme.com)
 
 ## Deployment
 
