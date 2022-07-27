@@ -2,11 +2,8 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import  NavBar  from '../components/NavBar'
 import Layout from '../components/layout'
-import Footer from '../components/Footer'
-import austin from '../images/austin.jpg'
-import { TerminalIcon, 
+import { TerminalIcon,
          DesktopComputerIcon,
          CodeIcon,
          VideoCameraIcon,
@@ -23,18 +20,22 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-      <div className="flex flex-col space-y-8">
+      <div className="flex flex-col max-w-4xl mt-20 space-y-8">
 
             {/*@Bio*/}
 
-      <div className="flex flex-col sm:flex-row space-x-4 space-y-4 sm: space-y-2 justify-center">
-        <Image className="basis-1/3 sm:basis-1/2 drop-shadow-2xl py-4"
+      <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 justify-center">
+          <div className="group relative mx-auto">
+              <div className="absolute inset-0 group-hover:blur-lg duration-500 bg-gradient-to-b from-nord1 to-nord14 blur"></div>
+        <Image className="relative mx-auto"
             src="/austin.jpeg"
             alt="Photo of Austin Nazworth"
             width={216}
             height={256}
+            objectFit="cover"
             layout="fixed"/>
-        <div className="flex flex-col basis-2/3 sm:basis-1/2 space-y-4">
+        </div>
+        <div className="flex flex-col space-y-4">
         <h1 className="sm:text-3xl font-bold underline underline-offset-8">
             Austin Nazworth
         </h1>
@@ -42,8 +43,8 @@ const Home: NextPage = () => {
             I was born and raised in Starke, FL but I now live in Winter Garden, FL.
             I spent 5 years in a Marine Corps Harrier squadron, and I just got my A.S.
             in I.T.</p>
-        <p className="text-sm">I&apos;m currently working on my bachelors degree in Software
-            Devlopment and Computing Technologies.</p>
+        <p className="text-sm">I&apos;m currently working on my B.A.S in Software
+            Development.</p>
         </div>
         </div>
 
@@ -75,7 +76,7 @@ const Home: NextPage = () => {
 
                 <li className="flex flex-row space-x-2">
                     <TerminalIcon className="w-5 h-5 text-nord15"/>
-                    <a href="https://iterm2.com">iTerm2</a>
+                    <a href="https://jetbrains.com">JetBrains</a>
                 </li>
 
                 <li className="flex flex-row space-x-2">
@@ -113,17 +114,17 @@ const Home: NextPage = () => {
 
                 <li className="flex flex-row space-x-2">
                     <VideoCameraIcon className="w-5 h-5 text-nord9"/>
-                    <a href="https://cs50.harvard.edu/p/2022">CS50p</a>
+                    <a href="https://missing.csail.mit.edu">MIT Missing Semester</a>
                 </li>
 
                 <li className="flex flex-row space-x-2">
-                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
-                    <a href="https://www.youtube.com/watch?v=8DvywoWv6fI">Python for Everybody</a>
+                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                    <a href="https://pragprog.com">The Pragmatic Programmer</a>
                 </li>
-                
+
                 <li className="flex flex-row space-x-2">
-                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
-                    <a href="https://missing.csail.mit.edu">MIT Missing Semester</a>
+                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                    <a href="https://buildingasecondbrain.com">Building a Second Brain</a>
                 </li>
 
                 <li className="flex flex-row space-x-2">
