@@ -9,7 +9,8 @@ const NavBar = () => {
                         bg-nord0 hover:shadow-none">
             <div className="flex-1 flex items-center justify-left m-2
                             text-nord4 whitepace-nowrap text-2xl sm:text-3xl
-                            hover:animate-pulse hover:text-nord13
+                            hover:scale-110 hover:translate-x-12 transition
+                            duration-500 hover:rotate-1 hover:text-nord13
                             font-mono drop-shadow-2xl subpixel-antialiased">
                 <Link href="/">
                    <a>Austin Nazworth</a>

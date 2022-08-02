@@ -8,6 +8,8 @@ import { TerminalIcon,
          CodeIcon,
          VideoCameraIcon,
          BookOpenIcon } from '@heroicons/react/solid'
+import {Accordion, AccordionButton, AccordionItem, AccordionPanel, Box} from "@chakra-ui/react";
+import {SiJava, SiJavascript, SiNestjs, SiNextdotjs, SiReact, SiSpring, SiTypescript} from "react-icons/si";
 
 const Home: NextPage = () => {
   return (
@@ -20,13 +22,20 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-      <div className="flex flex-col max-w-4xl mt-20 space-y-8">
+      <div className="flex flex-col max-w-4xl mt-20 space-y-10">
 
             {/*@Bio*/}
 
-      <div className="flex flex-col sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 justify-center">
+          <div className="relative group w-screen sm:w-full sm:rounded-l-full
+                        sm:bg-gradient-to-b from-nord0 to-nord1">
+              <div className="absolute -inset-24 -inset-y-0 z-0 w-screen
+                    rounded-l-full sm:bg-gradient-to-b from-nord0 to-nord1
+                    group-hover:-translate-x-40 group-hover:scale-110 ease-out delay-200 duration-500">
+              </div>
+      <div className="relative flex flex-col px-4 sm:flex-row sm:space-x-8 space-y-4 sm:space-y-0 justify-center">
           <div className="group relative mx-auto">
-              <div className="absolute inset-0 group-hover:blur-lg duration-500 bg-gradient-to-b from-nord1 to-nord14 blur"></div>
+              <div className="absolute inset-0 group-hover:blur-2xl duration-1000 ease-in-out bg-gradient-to-b from-nord1 to-nord7
+                            opacity-0 group-hover:opacity-100 group-hover:rotate-180 blur-sm"></div>
         <Image className="relative mx-auto"
             src="/austin.jpeg"
             alt="Photo of Austin Nazworth"
@@ -36,110 +45,146 @@ const Home: NextPage = () => {
             layout="fixed"/>
         </div>
         <div className="flex flex-col space-y-4">
-        <h1 className="sm:text-3xl font-bold underline underline-offset-8">
-            Austin Nazworth
-        </h1>
-        <p className="text-sm">I&apos;m currently a full time student at Valencia College in Orlando, FL.
+            <h1 className="text-4xl text-center sm:text-7xl scale-0 group-hover:scale-100
+                    opacity-0 transition duration-1000 delay-700 ease-in-out group-hover:opacity-70
+                     font-bold whitespace-nowrap origin-top text-nord3">
+                Austin Nazworth
+            </h1>
+        <p className="text-sm sm:text-md">I&apos;m a full time student at Valencia College.
             I was born and raised in Starke, FL but I now live in Winter Garden, FL.
             I spent 5 years in a Marine Corps Harrier squadron, and I just got my A.S.
             in I.T.</p>
-        <p className="text-sm">I&apos;m currently working on my B.A.S in Software
+        <p className="text-md">I&apos;m currently working on my B.A.S in Software
             Development.</p>
+            <span className="flex flex-row py-4 space-x-4 ease-in-out text-center">
+                <SiJava className="text-nord4 text-6xl hover:scale-110 duration-200 hover:rotate-2" />
+                <SiJavascript className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+                <SiTypescript className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+                <SiSpring className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+                <SiNestjs className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+                <SiNextdotjs className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+                <SiReact className="text-nord4 text-6xl hover:scale-125 duration-200 hover:rotate-2" />
+            </span>
         </div>
         </div>
+          </div>
 
-        {/*@Timeline*/}
 
-      <div className="flex flex-row align-center justify-center">
-        <div className="flex flex-col space-y-4">
-        <h2 className="text-2xl font-bold underline underline-offset-8">Timeline</h2>
-        <ul>
-            <li className="text-sm"><strong className="text-nord8">1996</strong> - Born in Starke, FL</li>
-            <li className="text-sm"><strong className="text-nord8">2014</strong> - Graduated from Bradford High School</li>
-            <li className="text-sm"><strong className="text-nord8">2014 -&gt; 2019</strong> - United States Marine Corps</li>
-            <li className="text-sm"><strong className="text-nord8">2020</strong> - First year at Valencia College</li>
-            <li className="text-sm"><strong className="text-nord8">2022</strong> - Received A.S. in Information Technology from Valencia</li>
-            <li className="text-sm"><strong className="text-nord13">Present</strong> - Working on B.A.S in Software Devleopment at Valencia</li>
-        </ul>
-        </div>
-      </div>
+        <div className="flex px-4 sm:justify-center">
 
-        <div className="flex flex-col sm:flex-row align-center justify-center space-y-4 sm:space-y-0 sm:space-x-8">
         {/*@Tools*/}
-        <div className="flex flex-col space-y-4">
-            <h2 className="text-2xl font-bold underline underline-offset-8">My Favorite Tools</h2>
-            <ul>
-                <li className="flex flex-row space-x-2">
-                    <TerminalIcon className="w-5 h-5 text-nord15"/>
-                    <a href="https://www.neovim.io">Neovim</a>
-                </li>
+            <div className="justify-center w-full">
+            <Accordion defaultIndex={[0]} allowMultiple className="text-center mx-auto">
+                <AccordionItem>
+                    <h2 className="text-2xl text-nord3 hover:text-nord4">
+                        <AccordionButton>
+                        <Box className="text-2xl sm:text-4xl">
+                            Timeline
+                        </Box>
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel>
+                        <ul>
+                            <li className="flex flex-row"><strong className="text-nord8 pr-2">1996</strong>  Born in Starke, FL</li>
+                            <li className="flex flex-row"><strong className="text-nord8 pr-2">2014</strong> Graduated from Bradford High School</li>
+                            <li className="flex flex-row"><strong className="text-nord8 pr-2">2014 -&gt; 2019</strong>United States Marine Corps</li>
+                            <li className="flex flex-row"><strong className="text-nord8 pr-2">2020</strong>First year at Valencia College</li>
+                            <li className="flex flex-row"><strong className="text-nord8 pr-2">2022</strong>Received A.S. in Information Technology from Valencia</li>
+                            <li className="flex flex-row"><strong className="text-nord13 pr-2">Present</strong>Working on B.A.S in Software Devleopment at Valencia</li>
+                        </ul>
+                    </AccordionPanel>
+                </AccordionItem>
 
-                <li className="flex flex-row space-x-2">
-                    <TerminalIcon className="w-5 h-5 text-nord15"/>
-                    <a href="https://jetbrains.com">JetBrains</a>
-                </li>
+                <AccordionItem>
+                    <h2 className="text-2xl text-nord3 hover:text-nord4">
+                        <AccordionButton>
+                            <Box className="text-2xl sm:text-4xl">
+                                Favorite Tools
+                            </Box>
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel>
+                        <ul>
+                            <li className="flex flex-row space-x-2">
+                                <TerminalIcon className="w-5 h-5 text-nord15"/>
+                                <a href="https://www.neovim.io">Neovim</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <TerminalIcon className="w-5 h-5 text-nord15"/>
-                    <a href="https://github.com/tmux/tmux">tmux</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <TerminalIcon className="w-5 h-5 text-nord15"/>
+                                <a href="https://jetbrains.com">JetBrains</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <TerminalIcon className="w-5 h-5 text-nord15"/>
-                    <a href="https://github.com/tldr-pages/tldr</div></div>">tldr</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <TerminalIcon className="w-5 h-5 text-nord15"/>
+                                <a href="https://github.com/tmux/tmux">tmux</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <DesktopComputerIcon className="w-5 h-5 text-nord13"/>
-                    <a href="https://www.debian.org">Debian</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <TerminalIcon className="w-5 h-5 text-nord15"/>
+                                <a href="https://github.com/tldr-pages/tldr</div></div>">tldr</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <CodeIcon className="w-5 h-5 text-nord12"/>
-                    <a href="https://github.com/features/copilot">GitHub Copilot</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <DesktopComputerIcon className="w-5 h-5 text-nord13"/>
+                                <a href="https://www.debian.org">Debian</a>
+                            </li>
 
-            </ul>
+                            <li className="flex flex-row space-x-2">
+                                <CodeIcon className="w-5 h-5 text-nord12"/>
+                                <a href="https://github.com/features/copilot">GitHub Copilot</a>
+                            </li>
+                        </ul>
+                    </AccordionPanel>
+                </AccordionItem>
 
-        </div>
+                <AccordionItem>
+                    <h2 className="text-2xl">
+                        <AccordionButton>
+                            <Box className="text-nord3 text-2xl sm:text-4xl hover:text-nord4">
+                                Recommended Resources
+                            </Box>
+                        </AccordionButton>
+                    </h2>
+                    <AccordionPanel>
+                        <ul>
+                            <li className="flex flex-row space-x-2">
+                                <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                                <a href="https://cs50.harvard.edu/x/2022">CS50x</a>
+                            </li>
 
-        {/*@Resources*/}
-        <div className="flex flex-col space-y-4">
-            <h2 className="text-2xl font-bold underline underline-offset-8">Recommended Resources</h2>
-            <ul>
-                <li className="flex flex-row space-x-2">
-                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
-                    <a href="https://cs50.harvard.edu/x/2022">CS50x</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <VideoCameraIcon className="w-5 h-5 text-nord9"/>
+                                <a href="https://missing.csail.mit.edu">MIT Missing Semester</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <VideoCameraIcon className="w-5 h-5 text-nord9"/>
-                    <a href="https://missing.csail.mit.edu">MIT Missing Semester</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                                <a href="https://pragprog.com">The Pragmatic Programmer</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
-                    <a href="https://pragprog.com">The Pragmatic Programmer</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                                <a href="https://buildingasecondbrain.com">Building a Second Brain</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
-                    <a href="https://buildingasecondbrain.com">Building a Second Brain</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                                <a href="https://alek772.github.io/Books/Practical%20Git%20Confident%20Git%20Through%20Practice.pdf">Practical Git</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
-                    <a href="https://alek772.github.io/Books/Practical%20Git%20Confident%20Git%20Through%20Practice.pdf">Practical Git</a>
-                </li>
+                            <li className="flex flex-row space-x-2">
+                                <BookOpenIcon className="w-5 h-5 text-nord6"/>
+                                <a href="https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/">Data Structures and Algorithms</a>
+                            </li>
 
-                <li className="flex flex-row space-x-2">
-                    <BookOpenIcon className="w-5 h-5 text-nord6"/>
-                    <a href="https://pragprog.com/titles/jwdsal2/a-common-sense-guide-to-data-structures-and-algorithms-second-edition/">Data Structures and Algorithms</a>
-                </li>
+                        </ul>
+                    </AccordionPanel>
+                </AccordionItem>
+            </Accordion>
+            </div>
 
-            </ul>
 
-        </div>
         </div>
 
       </div>
