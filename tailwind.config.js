@@ -13,5 +13,6 @@ module.exports = {
   },
     plugins: [
         require('tailwind-nord'),
+        require("daisyui"),
     ],
 }

@@ -57,7 +57,7 @@ const PROJECTS = [
         image: '/anazworthHomepage.png',
         alt: 'Austin Nazworth\'s Homepage',
         link: 'https://www.anazworth.com/',
-        stack: ['Next.js', 'TailWind CSS', 'Chakra UI', 'TypeScript'],
+        stack: ['Next.js', 'TailWind CSS', 'DaisyUI', 'TypeScript'],
     },
     { id: 2,
         title: 'North Florida Communications',
