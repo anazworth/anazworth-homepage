@@ -2,10 +2,16 @@ import Layout from '../components/layout'
 import Image from 'next/image'
 import {ChevronDoubleDownIcon, ChevronRightIcon, ChevronLeftIcon} from '@heroicons/react/outline';
 import {data} from "autoprefixer";
+import Head from "next/head";
 
 function about() {
     return (
         <Layout>
+            <Head>
+                <title>About Me</title>
+                <meta name="Website for Austin Nazworth" content="About Austin Nazworth" />
+                <link rel="icon" href="/curryfavicon.ico" />
+            </Head>
         <div className="flex flex-col space-y-0">
 
         <div className="relative min-h-screen flex flex-col items-center justify-between
