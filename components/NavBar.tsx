@@ -1,16 +1,28 @@
 import Link from 'next/link';
+import {useEffect, useState} from "react";
 
 const NavBar = () => {
+    const [animateNavBar, setAnimateNavBar] = useState(false);
+    useEffect(() => {
+        const listener = () => {
+            console.log("scrolling");
+            window.scrollY > 40 ? setAnimateNavBar(true) : setAnimateNavBar(false);
+            document.body.addEventListener('scroll', listener)
+            return () => {
+                document.body.removeEventListener('scroll', listener)
+            }
+        }
+    }, []);
     return (
         <>
         <nav>
-        <div className="fixed top-0 left-0 h-16 w-screen m-0 z-50
+        <div className={`fixed top-0 left-0 h-16 w-screen m-0 z-50
                         flex opacity-80 hover:opacity-100
-                        bg-nord0 hover:shadow-none">
+                        bg-nord0 hover:shadow-none ${animateNavBar && 'bg-white'}`}>
             <div className="flex-1 flex items-center justify-left m-2
-                            text-nord4 whitepace-nowrap text-2xl sm:text-3xl
-                            hover:scale-110 hover:translate-x-12 transition
-                            duration-500 hover:rotate-1 hover:text-nord13
+                            text-nord4 whitespace-nowrap text-2xl sm:text-3xl
+                             transition hover:translate-x-4
+                            duration-500 hover:text-nord13
                             font-mono drop-shadow-2xl subpixel-antialiased">
                 <Link href="/">
                    <a>Austin Nazworth</a>
