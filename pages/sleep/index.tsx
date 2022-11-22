@@ -10,6 +10,9 @@ type Response = {
 }
 
 function SleepIndex() {
+    const [form, setForm] = useState(true);
+    const toggleForm = () => setForm(!form);
+
     const Submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
@@ -25,8 +28,6 @@ function SleepIndex() {
         toggleForm();
     }
 
-    const [form, setForm] = useState(true);
-    const toggleForm = () => setForm(!form);
 
     return (
         <Layout>
