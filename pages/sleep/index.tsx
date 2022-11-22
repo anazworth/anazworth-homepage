@@ -1,8 +1,7 @@
 import Layout from "../../components/layout";
 import styles from "../../styles/Home.module.css";
 import React, {useState} from "react";
-
-
+import Link from "next/link";
 
 
 type Response = {
@@ -10,9 +9,7 @@ type Response = {
     response: boolean;
 }
 
-
-
-function SleepIndex({summary}: {summary: Summary}) {
+function SleepIndex() {
     const Submit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const data = new FormData(e.currentTarget);
@@ -38,9 +35,9 @@ function SleepIndex({summary}: {summary: Summary}) {
                 <main className={styles.main}>
                     {!form && <div className="flex flex-col justify-center space-y-8">
                         <div className="text-2xl text-nord14 animate-bounce text-center">Thanks for your contribution!</div>
-                        <a href="/sleep/results" className="justify-center text-center mx-auto">
+                        <Link href="/sleep/results" className="justify-center text-center mx-auto">
                         <button className="bg-nord14 text-black rounded-md p-2" >See the results</button>
-                        </a>
+                        </Link>
                     </div>
                     }
                     {form &&
