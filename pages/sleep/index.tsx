@@ -60,7 +60,7 @@ function SleepIndex() {
                                     <input required type="number" name="age" id="age"
                                            className="border-1 border-nord14 rounded-md p-2 text-black "/>
                                 </div>
-                                <button type="submit" value="Submit"
+                                <button type="submit"
                                         className="bg-nord14 text-black rounded-md p-2 ">Submit
                                 </button>
                             </form>
