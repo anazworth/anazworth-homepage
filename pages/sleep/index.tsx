@@ -25,7 +25,6 @@ function SleepIndex() {
             method: "POST",
             body: JSON.stringify(responseData),
         });
-        toggleForm();
     }
 
 
