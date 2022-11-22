@@ -13,16 +13,18 @@ function SleepIndex() {
     const [form, setForm] = useState(true);
     const toggleForm = () => setForm(!form);
 
-    const Submit = async (e: React.FormEvent<HTMLFormElement>) => {
-        const data = new FormData(e.currentTarget);
-        const responseData: Response = {
-            response: data.get("response") === "true",
-            age: parseInt(data.get('age') as string)
+    const handleSubmit = async (event) => {
+        event.preventDefault()
+        const data = {
+            age: event.target.age.value,
+            response: event.target.response.value
         }
+        const JSONdata = JSON.stringify(data);
+
 
         await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
             method: "POST",
-            body: JSON.stringify(responseData),
+            body: JSONdata,
         });
         toggleForm();
     }
@@ -41,7 +43,7 @@ function SleepIndex() {
                     }
                     {form &&
                         <><h1 className="text-2xl underline mb-4">Contribute your data</h1>
-                            <form onSubmit={Submit}  id="response"
+                            <form onSubmit={handleSubmit}  id="response"
                                   className="flex flex-col justify-center text-center space-y-4">
                                 <label className="">Do you sleep for less than 7 hours per night? (On average)</label>
                                 <div className="flex flex-row justify-center space-x-4">
