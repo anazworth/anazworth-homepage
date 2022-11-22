@@ -11,7 +11,7 @@ type Summary = {
     percentNo: number;
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/summary");
     const data = await res.json();
     return {
