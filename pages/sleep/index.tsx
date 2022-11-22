@@ -12,9 +12,7 @@ type Response = {
 function SleepIndex() {
     const [form, setForm] = useState(true);
     const toggleForm = () => setForm(!form);
-
     const Submit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
         const data = new FormData(e.currentTarget);
         const responseData: Response = {
             response: data.get("response") === "true",
@@ -25,6 +23,7 @@ function SleepIndex() {
             method: "POST",
             body: JSON.stringify(responseData),
         });
+        toggleForm();
     }
 
 
