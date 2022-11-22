@@ -42,7 +42,7 @@ function SleepIndex() {
                     }
                     {form &&
                         <><h1 className="text-2xl underline mb-4">Contribute your data</h1>
-                            <form onSubmit={Submit} action='/'  id="response"
+                            <form onSubmit={Submit}  id="response"
                                   className="flex flex-col justify-center text-center space-y-4">
                                 <label className="">Do you sleep for less than 7 hours per night? (On average)</label>
                                 <div className="flex flex-row justify-center space-x-4">
