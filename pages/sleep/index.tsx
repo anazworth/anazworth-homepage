@@ -12,6 +12,7 @@ type Response = {
 function SleepIndex() {
     const [form, setForm] = useState(true);
     const toggleForm = () => setForm(!form);
+
     const Submit = async (e: React.FormEvent<HTMLFormElement>) => {
         const data = new FormData(e.currentTarget);
         const responseData: Response = {
@@ -19,7 +20,7 @@ function SleepIndex() {
             age: parseInt(data.get('age') as string)
         }
 
-        const response = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
+        await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
             method: "POST",
             body: JSON.stringify(responseData),
         });
@@ -58,7 +59,7 @@ function SleepIndex() {
                                     <input required type="number" name="age" id="age"
                                            className="border-1 border-nord14 rounded-md p-2 text-black "/>
                                 </div>
-                                <button type="submit"
+                                <button type="submit" value="Submit"
                                         className="bg-nord14 text-black rounded-md p-2 ">Submit
                                 </button>
                             </form>
