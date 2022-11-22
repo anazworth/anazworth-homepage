@@ -13,7 +13,8 @@ function SleepIndex() {
     const [form, setForm] = useState(true);
     const toggleForm = () => setForm(!form);
 
-    const handleSubmit = async (event) => {
+
+    const handleSubmit = async (event: any) => {
         event.preventDefault()
         const data = {
             age: event.target.age.value,
