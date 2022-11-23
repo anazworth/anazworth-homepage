@@ -17,13 +17,13 @@ function SleepIndex() {
     const handleSubmit = async (event: any) => {
         event.preventDefault()
         const data = {
-            age: event.target.age.value,
-            response: event.target.response.value
+            response: event.target.response.value,
+            age: event.target.age.value
         }
         const JSONdata = JSON.stringify(data);
 
 
-        const response = await fetch("/api/sleepResponse", {
+        const response = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/sleepResponse", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
