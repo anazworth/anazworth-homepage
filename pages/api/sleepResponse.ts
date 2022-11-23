@@ -30,8 +30,8 @@ const sendData = async (age: number, response: boolean) => {
             'Content-type': 'application/json; charset=UTF-8',
         },
         body: JSON.stringify({
-            response: response,
-            age: age
+            'response': response,
+            'age': age
         })
     }).then(r => r.json())
         .then(json => console.log(json))
