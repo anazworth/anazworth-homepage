@@ -23,7 +23,7 @@ function SleepIndex() {
         const JSONdata = JSON.stringify(data);
 
 
-        const response = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/sleepResponse", {
+        const response = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
