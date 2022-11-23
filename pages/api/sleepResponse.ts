@@ -3,7 +3,7 @@ import {toJSON} from "yaml/util";
 import {json} from "stream/consumers";
 
 type Data = {
-    response: boolean,
+    response: string,
     age: number,
 }
 
@@ -18,24 +18,41 @@ export default async function handler(
     res.status(200).json(req.body)
 }
 
-const sendData = async (age: number, response: boolean) => {
-    const data: Data = {
-        response: response,
-        age: age
-    }
-    console.log(data)
-    let sentData = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
-        method: "POST",
-        headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-        },
-        body: JSON.stringify({
-            'response': response,
-            'age': age
-        })
-    }).then(r => r.json())
-        .then(json => console.log(json))
-        .catch(err => console.log(err))
+const sendData = async (age: number, response: string) => {
+    console.log(age)
+    console.log(response)
 
-    console.log(sentData)
+    let responseBool = false
+    if (response === "true") {
+        responseBool = true
+    }
+
+    if (response === "true")
+{         await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + '/api/v1/response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            },
+            body: JSON.stringify({
+                "age": 18,
+                "response": true
+            })
+        })
+ }
+    else if (response === "false") {
+        await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + '/api/v1/response', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE,PATCH,OPTIONS',
+            },
+            body: JSON.stringify({
+                "age": 18,
+                "response": false
+            })
+        })
+    }
 }

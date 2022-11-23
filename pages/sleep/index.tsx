@@ -6,7 +6,7 @@ import Link from "next/link";
 
 type Response = {
     age: number;
-    response: boolean;
+    response: "true" | "false";
 }
 
 function SleepIndex() {
