@@ -24,7 +24,7 @@ const sendData = async (age: number, response: boolean) => {
         age: age
     }
     console.log(data)
-    let sentData = await fetch("http://10.10.10.10:8080/api/v1/response", {
+    let sentData = await fetch(process.env.NEXT_PUBLIC_SLEEPSTATS_URL + "/api/v1/response", {
         method: "POST",
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
