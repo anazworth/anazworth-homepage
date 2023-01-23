@@ -34,5 +34,15 @@ const PROJECTS: object = [
         link: 'https://www.northfloridacommunications.com/',
         stack: ['Next.js', 'TailWind CSS', 'Chakra UI', 'email.js', 'TypeScript'],
     },
+    {
+        id: 3,
+        title: 'Sleep Statistics',
+        description: 'A school project taken too far.',
+        image: '/sleepData.png',
+        alt: 'Sleep Data Project',
+        link: 'https://anazworth.com/sleep/data',
+        altLink: 'https://www.github.com/anazworth/sleepStats',
+        stack: ['Frontend: Next.js, TailWind Css, TypeScript', 'Backend: Go, Gin, Gorm', 'Database: Postgres', 'Deployment: Docker, Ubuntu Server', 'Raspberry Pi 4'],
+    }
 
 ];

@@ -11,6 +11,18 @@ export function projectsView(projects: any) {
                             <h1 className="flex text-4xl sm:text-6xl font-bold justify-center sm:whitespace-nowrap my-10">{project.title}</h1>
                         </a>
                     </Link>
+                    <Link href={project.link}>
+                        <a className="text-nord14 hover:scale-105 duration-500">
+                            <h1 className="flex text-xl sm:text-2xl font-bold justify-center sm:whitespace-nowrap my-10">{project.link}</h1>
+                            </a>
+                    </Link>
+                    {project.altLink && (
+                    <Link href={project.altLink}>
+                        <a className="text-nord14 hover:scale-105 duration-500">
+                            <h1 className="flex text-xl sm:text-2xl font-bold justify-center sm:whitespace-nowrap">{project.altLink}</h1>
+                            </a>
+                    </Link>
+                        )}
                     <p className="flex text-lg text-center justify-center my-10">{project.description}</p>
                 </div>
                 <div className="flex flex-col justify-center bg-gradient-to-t from-nord2 to-nord0 space-y-8">
