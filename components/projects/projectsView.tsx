@@ -25,7 +25,7 @@ export function projectsView(projects: any) {
                         )}
                     <p className="flex text-lg text-center justify-center my-10">{project.description}</p>
                 </div>
-                <div className="flex flex-col justify-center bg-gradient-to-t from-nord2 to-nord0 space-y-8">
+                <div className="flex flex-col justify-center bg-gradient-to-t from-nord1 to-nord0 space-y-8">
                     <div className="mt-4 sm:mt-4">
                         <h2 className="flex text-2xl font-bold underline justify-center">The Stack</h2>
 
@@ -36,8 +36,6 @@ export function projectsView(projects: any) {
                         </ul>
                     </div>
                     <div className="relative group mt-4 justify-center mx-auto">
-                        <div className="absolute inset-0 blur bg-nord14
-                                    group-hover:blur-xl transition duration-1000"></div>
                         <Image src={project.image} alt={project.alt}
                                layout={'intrinsic'} width={900} height={500} objectFit={'contain'}
                         />
